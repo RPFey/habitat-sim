@@ -114,9 +114,9 @@ struct ESPEGLContext : ESPContext {
       CHECK(eglDevId < numDevices)
           << "[EGL] Could not find an EGL device for CUDA device " << device;
 
-      CHECK(isNvidiaGpuReadable(eglDevId))
-          << "[EGL] EGL device " << eglDevId << ", CUDA device " << device
-          << " is not readable";
+      // CHECK(isNvidiaGpuReadable(eglDevId))
+      //     << "[EGL] EGL device " << eglDevId << ", CUDA device " << device
+      //     << " is not readable";
 
       LOG(INFO) << "[EGL] Selected EGL device " << eglDevId
                 << " for CUDA device " << device;
